@@ -1,4 +1,9 @@
+var machine = null;
+
 function HelloWorld()
 {
-	alert("HelloWorld");
+	var test = document.getElementById('fpscontainer');
+	machine = new Turing();
+	test.innerHTML = machine.Print();
 }
+
