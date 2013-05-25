@@ -4,6 +4,7 @@ function HelloWorld()
 {
 	var test = document.getElementById('fpscontainer');
 	machine = new Turing();
+	machine.Load();
 	test.innerHTML = machine.Print();
 }
 
