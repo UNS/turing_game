@@ -19,10 +19,12 @@ function LoadJSON()
 	{
 		if (xmlhttp.readyState === 4 && xmlhttp.status === 200)
 		{
-			document.getElementById("fpscontainer").innerHTML = xmlhttp.responseText;
+			raw = xmlhttp.responseText;
+			var result = JSON.parse(raw);
+			document.getElementById("fpscontainer").innerHTML = result.states;
 		}
-	}
 	xmlhttp.open("GET", "json/simple.json", true);
 	xmlhttp.send();
+	};
 }
 
